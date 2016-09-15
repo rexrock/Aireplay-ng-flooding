@@ -11,7 +11,8 @@ int main(){
 	string net_bssid;
 	string net_channel; 
 
-	system("iwconfig wlan0 up");  //killing existing processes
+	system("iwconfig");
+	system("ifconfig wlan0 up");  //killing existing processes
 	system("iwlist wlan0 scanning"); //starting the interface
 	cout << "-------------------------------------------------------" << endl;
 	cout << "network bssid: "; cin >> net_bssid;
