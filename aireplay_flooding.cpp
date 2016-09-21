@@ -12,11 +12,11 @@ int main(){
 	string net_channel; 
 
 	system("iwconfig");
-	system("ifconfig wlan0 up");  //killing existing processes
-	system("iwlist wlan0 scanning"); //starting the interface
+	system("ifconfig wlan0 up");  
+	system("iwlist wlan0 scanning");
 	cout << "-------------------------------------------------------" << endl;
-	cout << "network bssid: "; cin >> net_bssid;
-	cout << "network channel: "; cin >> net_channel;
+	cout << "network bssid: "; cin >> net_bssid;//network bssid 
+	cout << "network channel: "; cin >> net_channel;//network channel 4, 6, etc
 
 	system("airmon-ng check kill");  //killing existing processes
 	system("airmon-ng start wlan0"); //starting the interface
